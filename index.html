@@ -1,48 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="#" type="image/x-icon" />
-  <title>Subscribe Form</title>
-</head>
-<body>
-  <div id="container">
-    <div id="hero">
-      <h1>Hello World</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    </div>
-    <div id="signup-form">
-      <h2>Create an Account</h2>
-      <form action="#" target="_blank" method="get" accept-charset="utf-8">
-        <input type="text" name="name" id="name" placeholder="Your Name" required/>
-        <input type="email" name="email" id="email" placeholder="Your Email" required/>
-        <input type="password" name="password" id="password" placeholder="Create Password" minlength="8" required/>
-        <input type="password" name="confirm" id="confirm" oninput="check(this)" placeholder="Re-type Password" minlength="8" required/> <p><i>*Password must be 8 characters long</i></p>
-        <br />
-        <div id="button">
-        <input type="submit" name="next" id="next" value="Next" />
-        <p><i>*By clicking Next, you agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a></i></p>
-        </div>
-      </form>
-      <div id="options">
-        <p>Log-In with an <a id="login" href="#">Existing Account</a> or using</p>
-        <div class="social">
-          <div class="icon">
-            <img src="assets/facebook.svg" alt="login with facebook">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <title>Signup Form</title>
+  </head>
+  <body>
+    <div id="container">
+      <!-- <div id="hero">
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div> -->
+      <div id="signup-form">
+        <p id="form-label">Create an Account</p>
+        <form action="#" target="_blank" method="post" accept-charset="utf-8">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            required
+          />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Create Password"
+            minlength="8"
+            required
+          />
+          <label for="confirm-password">Repeat Password</label>
+          <input
+            type="password"
+            name="confirm"
+            id="confirm-password"
+            oninput="check(this)"
+            placeholder="Repeat Password"
+            minlength="8"
+            required
+          />
+          <p class="hidden"><i>*Password must be 8 characters long</i></p>
+          <br />
+          <div id="button">
+            <input type="submit" name="next" id="next" value="Next" />
+            <p>Already have an account? <a href="#">Login</a></p>
+            <!-- <p>
+              <i
+                >By clicking Next, you agree to the
+                <a href="#">Privacy Policy</a> and
+                <a href="#">Terms of Use</a></i
+              >
+            </p> -->
           </div>
-          <div class="icon">
-            <img src="assets/google.svg" alt="login with google">
-          </div>
-          <div class="icon">
-            <img src="assets/twitter.svg" alt="login with twitter">
+        </form>
+        <div id="options">
+          <!-- <p>
+            Log-In with an <a id="login" href="#">Existing Account</a> or using
+          </p> -->
+          <div class="social">
+            <div class="icon">
+              <img src="assets/facebook.svg" alt="login with facebook" />
+            </div>
+            <div class="icon">
+              <img src="assets/google.svg" alt="login with google" />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-	<script src="script.js"></script>
-	<!--Icons from SVGrepo.com-->
-</body>
+    <script src="script.js"></script>
+    <!--Icons from SVGrepo.com-->
+  </body>
 </html>
