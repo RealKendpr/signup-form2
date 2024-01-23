@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #ed9121;
+  font-family: Sans-Serif;
+}
+#hero {
+  font-size: 1.5rem;
+  width: 80%;
+  margin: 20px auto;
+  color: #fff8f0;
+}
+h2 {
+  color: #402e32;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+#signup-form {
+  width: 80%;
+  padding: 15px 20px;
+  margin: 20px auto;
+  border: 1px solid #eee;
+  background-color: #fff8f0;
+}
+input:not(#next) {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #402e32;
+  background-color: #fff;
+  margin: 0 0 10px 0;
+  padding: 5px 7px;
+  font-size: .9rem;
+  width: 100%;
+}
+#button {
+  display: flex;
+  gap: 20px;
+}
+#next {
+  padding: 8px 30px;
+  font-size: 1.3rem;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  background-color: #217ded;
+  color: #fefefe;
+  transition: all .1s ease-in;
+  margin: 0 0 10px 0;
+}
+#next:hover {
+  background-color: #64a4f2;
+}
+#next:focus {
+  transform: scale(.9);
+}
+form > p, #button > p, a:not(#login) {
+  font-size: .8rem;
+  color: #402e32;
+}
+#options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0 0 0;
+  gap: 20px;
+}
+#options p {
+  font-size: .9rem;
+  color: #402e32;
+  font-weight: bold;
+}
+#options p a {
+  color: #402e32;
+}
+.social {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.icon {
+  flex-basis: 100%;
+  transition: all .2s;
+}
+.icon:hover {
+  background-color: rgba(237,145,33,0.5);
+  cursor: pointer;
+}
+.icon > img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 35px;
+  margin: 3px 0;
+}
+a:hover {
+  cursor: pointer;
+}
+@media (min-width: 481px) {
+  #container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+  }
+  #hero, #signup-form {
+    margin: 0;
+  }
+  #hero {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #signup-form {
+    width: 350px;
+  }
+}
