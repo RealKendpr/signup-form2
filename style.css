@@ -2,14 +2,24 @@
   padding: 0;
   margin: 0;
 }
+:root {
+  --accent-clr: hsl(33, 85%, 53%);
+  --complement-clr: hsl(213, 85%, 53%);
+  --neutral-clr-100: hsl(0, 0%, 100%);
+  --neutral-clr-200: hsl(32, 100%, 97%);
+  --neutral-clr-300: hsl(35, 20%, 90%);
+  --neutral-clr-500: hsl(0, 1%, 40%);
+  --neutral-clr-900: hsl(347, 16%, 22%);
+  --font-family: "Plus Jakarta Sans", sans-serif;
+}
 p,
 h1,
 label,
 input {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-family);
 }
 body {
-  background-color: #ed9121;
+  background: var(--accent-clr);
   display: grid;
   place-items: center;
   height: 100svh;
@@ -17,8 +27,9 @@ body {
 }
 #container {
   width: 80%;
+  min-width: 350px;
 }
-#hero {
+/* #hero {
   margin: 20px auto;
   color: #fff8f0;
   height: 100svh;
@@ -26,12 +37,12 @@ body {
   & p {
     font-size: 1.2rem;
   }
-}
+} */
 h1 {
   font-size: 1.5rem;
 }
 #form-title {
-  color: #402e32;
+  color: var(--neutral-clr-900);
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
@@ -41,7 +52,7 @@ h1 {
   gap: 24px;
   padding: 16px;
   margin-inline: auto;
-  background-color: #fff8f0;
+  background-color: var(--neutral-clr-200);
 }
 .hidden {
   display: none;
@@ -63,10 +74,10 @@ h1 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  
+
   outline: none;
-  border: 1px solid hsl(35, 20%, 83%);
-  background-color: #fff;
+  border: 1px solid var(--neutral-clr-300);
+  background-color: var(--neutral-clr-100);
   /* margin: 0 0 10px 0; */
   padding: 8px;
   font-size: 0.8rem;
@@ -75,7 +86,7 @@ h1 {
 }
 #button-wrapper :is(p, a) {
   font-size: 0.8rem;
-  color: hsl(0, 1%, 40%);
+  color: var(--neutral-clr-500);
 }
 #next-button {
   width: 100%;
@@ -84,13 +95,13 @@ h1 {
   outline: none;
   border: none;
   font-weight: 700;
-  background-color: #217ded;
-  color: #fefefe;
+  background-color: var(--complement-clr);
+  color: var(--neutral-clr-200);
   transition: all 0.1s ease-in;
   margin: 24px 0 8px;
 }
 #next-button:hover {
-  background-color: #64a4f2;
+  background-color: hsl(213, 85%, 67%);
   cursor: pointer;
 }
 #next-button:focus {
@@ -107,7 +118,7 @@ h1 {
   width: 40%;
   height: 1px;
   display: block;
-  background: hsl(35, 20%, 83%);
+  background: var(--neutral-clr-300);
   top: 50%;
   transform: translateY(-50%);
 }
@@ -130,7 +141,7 @@ h1 {
 }
 .icon {
   /* border: 1px solid hsl(35, 20%, 83%); */
-  background: hsl(35, 20%, 90%);
+  background: var(--neutral-clr-300);
   flex-basis: 100%;
   padding: 12px;
   transition: all 0.2s;
@@ -141,32 +152,24 @@ h1 {
   }
 }
 .icon:hover {
-  background-color: rgba(237, 145, 33, 0.5);
+  background-color: hsla(33, 85%, 53%, 0.5);
 }
 a:hover {
   cursor: pointer;
 }
 @media (min-width: 481px) {
-  #container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    gap: 70px;
-  }
-  #hero,
-  #signup-form {
+  /* #hero,
+  #form-wrapper {
     margin: 0;
-  }
-  #hero {
+  } */
+  /* #hero {
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+  } */
   #form-wrapper {
     width: 350px;
+    margin: 0 auto;
   }
 }
