@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <title>Signup Form</title>
@@ -13,74 +19,76 @@
         <h1>Hello World</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div> -->
-      <div id="signup-form">
-        <p id="form-label">Create an Account</p>
+      <div id="form-wrapper">
+        <p id="form-title">Sign Up</p>
         <form action="#" target="_blank" method="post" accept-charset="utf-8">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
-            required
-          />
-          <label for="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            required
-          />
-          <label for="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Create Password"
-            minlength="8"
-            required
-          />
-          <label for="confirm-password">Repeat Password</label>
-          <input
-            type="password"
-            name="confirm"
-            id="confirm-password"
-            oninput="check(this)"
-            placeholder="Repeat Password"
-            minlength="8"
-            required
-          />
-          <p class="hidden"><i>*Password must be 8 characters long</i></p>
-          <br />
-          <div id="button">
-            <input type="submit" name="next" id="next" value="Next" />
+          <div class="input-wrapper">
+            <div>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Create Password"
+                minlength="8"
+                required
+              />
+            </div>
+            <div>
+              <label for="confirm-password">Repeat Password</label>
+              <input
+                type="password"
+                name="confirm"
+                id="confirm-password"
+                oninput="check(this)"
+                placeholder="Repeat Password"
+                minlength="8"
+                required
+              />
+            </div>
+            <p class="hidden"><i>*Password must be 8 characters long</i></p>
+          </div>
+          <div id="button-wrapper">
+            <input type="submit" name="next" id="next-button" value="Next" />
             <p>Already have an account? <a href="#">Login</a></p>
-            <!-- <p>
-              <i
-                >By clicking Next, you agree to the
-                <a href="#">Privacy Policy</a> and
-                <a href="#">Terms of Use</a></i
-              >
-            </p> -->
           </div>
         </form>
-        <div id="options">
-          <!-- <p>
-            Log-In with an <a id="login" href="#">Existing Account</a> or using
-          </p> -->
-          <div class="social">
-            <div class="icon">
-              <img src="assets/facebook.svg" alt="login with facebook" />
-            </div>
-            <div class="icon">
-              <img src="assets/google.svg" alt="login with google" />
-            </div>
+        <div id="social-wrapper">
+          <p class="or-separator">or</p>
+          <div class="social-signup">
+            <a href="#" class="icon">
+              <img src="./assets/facebook.svg" alt="" />
+            </a>
+            <a href="#" class="icon">
+              <img src="./assets/google.svg" alt="" />
+            </a>
+            <a href="#" class="icon"
+              ><img src="./assets/github.svg" alt=""
+            /></a>
           </div>
         </div>
       </div>
     </div>
     <script src="script.js"></script>
-    <!--Icons from SVGrepo.com-->
   </body>
 </html>

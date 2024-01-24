@@ -2,13 +2,21 @@
   padding: 0;
   margin: 0;
 }
+p,
+h1,
+label,
+input {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
 body {
   background-color: #ed9121;
-  font-family: Sans-Serif;
+  display: grid;
+  place-items: center;
+  height: 100svh;
+  height: 100vh;
 }
 #container {
   width: 80%;
-  margin-inline: auto;
 }
 #hero {
   margin: 20px auto;
@@ -22,104 +30,118 @@ body {
 h1 {
   font-size: 1.5rem;
 }
-#form-label {
+#form-title {
   color: #402e32;
   text-align: center;
-  margin: 0 0 20px 0;
-  font-size: 1.2rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
-#signup-form {
-  padding: 15px 20px;
-  margin: 20px auto;
-  border: 1px solid #eee;
+#form-wrapper {
+  display: grid;
+  gap: 24px;
+  padding: 16px;
+  margin-inline: auto;
   background-color: #fff8f0;
 }
 .hidden {
   display: none;
 }
-form label {
-  font-size: 0.8rem;
+.input-wrapper {
+  display: grid;
+  gap: 1rem;
+
+  & > div {
+    display: grid;
+    gap: 4px;
+  }
 }
-input:not(#next) {
+#form-wrapper label {
+  font-size: 0.8rem;
+  color: hsl(0, 1%, 40%);
+}
+#form-wrapper input:not(#next-button) {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  
   outline: none;
-  border: 1px solid #402e32;
+  border: 1px solid hsl(35, 20%, 83%);
   background-color: #fff;
-  margin: 0 0 10px 0;
-  padding: 5px 7px;
-  font-size: 0.9rem;
+  /* margin: 0 0 10px 0; */
+  padding: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
   width: 100%;
 }
-/* #button {
-  display: flex;
-  gap: 20px;
-} */
-#next {
+#button-wrapper :is(p, a) {
+  font-size: 0.8rem;
+  color: hsl(0, 1%, 40%);
+}
+#next-button {
   width: 100%;
   padding: 8px 30px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   outline: none;
   border: none;
-  font-weight: bold;
+  font-weight: 700;
   background-color: #217ded;
   color: #fefefe;
   transition: all 0.1s ease-in;
-  margin: 0 0 10px 0;
+  margin: 24px 0 8px;
 }
-#next:hover {
+#next-button:hover {
   background-color: #64a4f2;
   cursor: pointer;
 }
-#next:focus {
+#next-button:focus {
   transform: scale(0.9);
 }
-form > p,
-#button > p,
-a:not(#login) {
-  font-size: 0.7rem;
-  color: #402e32;
+.or-separator {
+  position: relative;
+  color: hsl(0, 1%, 40%);
 }
-#options {
+.or-separator::before,
+.or-separator::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 1px;
+  display: block;
+  background: hsl(35, 20%, 83%);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.or-separator::after {
+  left: 55%;
+}
+.or-separator::before {
+  right: 55%;
+}
+#social-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin: 10px 0 0 0;
   gap: 20px;
 }
-#options p {
-  font-size: 0.9rem;
-  color: #402e32;
-  font-weight: bold;
-}
-#options p a {
-  color: #402e32;
-}
-.social {
+.social-signup {
   display: flex;
-  /* justify-content: space-around; */
   gap: 10px;
 }
 .icon {
-  border: 1px solid black;
+  /* border: 1px solid hsl(35, 20%, 83%); */
+  background: hsl(35, 20%, 90%);
   flex-basis: 100%;
+  padding: 12px;
   transition: all 0.2s;
 
   & img {
-    width: 24px;
+    width: 20px;
+    height: 20px;
   }
 }
-/* .icon:hover {
+.icon:hover {
   background-color: rgba(237, 145, 33, 0.5);
-  cursor: pointer;
-} */
-.icon > img {
-  display: inline-block;
-  vertical-align: middle;
-  height: 35px;
-  margin: 3px 0;
 }
 a:hover {
   cursor: pointer;
@@ -144,7 +166,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
   }
-  #signup-form {
+  #form-wrapper {
     width: 350px;
   }
 }
